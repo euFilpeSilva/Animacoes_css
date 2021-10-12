@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Animação</title>
+</head>
+<body>
+  <section>
+   <img src="image\stars.png" id="stars">
+   <img src="image\moon.png" id="moon">
+   <img src="image\mountains_behind.png" id="mantanhas1">
+   <h2 id="text">Anime <span>JS</span></h2>
+   <a href="#" id="btn">Play</a>
+   <img src="image\mountains_front.png" id="mantanhas2">
+  </section>
+  <script src="anime.min.js"></script>
+  <script>
+
+    var animation = anime.timeline({
+        autoplay: false,
+    });
+
+    animation.add({
+        targets: '#btn',
+        translateY: 6000,
+        duration: 1000,
+        easing: 'easeInOutSine'
+    });
+    animation.add({
+        targets: '#stars',
+        translateY:1000,
+        duration: 1500,
+        easing: 'easeInOutSine'
+    });
+    animation.add({
+        targets: '#mantanhas1',
+        translateY:-900,
+        duration: 1000,
+        easing: 'easeInOutSine'
+    });
+    animation.add({
+        targets: '#moon',
+        translateY:1000,
+        duration: 1000,
+        easing: 'easeInOutSine'
+    });
+    animation.add({
+        targets: '#mantanhas2',
+        translateY:-900,
+        duration: 1000,
+        easing: 'easeInOutSine'
+    });
+    animation.add({
+        targets: '#text',
+        translateX:-2000,
+        duration: 1000,
+        easing: 'easeInOutSine'
+    });
+    animation.add({
+        targets: '#btn',
+        translateY: -30,
+        duration: 2000,
+        easing: 'easeInOutSine'
+    });
+    document.querySelector('#btn').onclick = animation.play;
+</script>
+</body>
+</html>

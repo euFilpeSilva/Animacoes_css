@@ -9,4 +9,4 @@
 
  ## Demonstração:
 
- <img src="image\post_animado.gif">
+ <img src="image\post_animado_02post.gif">
